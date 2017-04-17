@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>CORS Speedtest</h1>
+
+    <form class="controls">
+      <input type="text" name="test-url"></input><br />
+      <button type="submit">Start</button>
+    </form>
+
+    <div id="test">
+      <h2 id="status">Waiting...</h2>
+
+      <div class="test-row">
+        <div class="value-wrapper">
+          <div class="title">Peak download speed</div>
+          <div class="value" id="peak-dl-speed-value">0</div>
+          <div class="units">Mb/sec</div>
+        </div>
+
+        <div class="value-wrapper">
+          <div class="title">Inst. download speed</div>
+          <div class="value" id="inst-dl-speed-value">0</div>
+          <div class="units">Mb/sec</div>
+        </div>
+
+        <div class="value-wrapper">
+          <div class="title">Avg. download speed</div>
+          <div class="value" id="avg-dl-speed-value">0</div>
+          <div class="units">Mb/sec</div>
+        </div>
+      </div>
+
+      <div class="test-row">
+        <div class="value-wrapper">
+          <div class="title">Peak download speed</div>
+          <div class="value" id="peak-dl-speed-mib-value">0</div>
+          <div class="units">MiB/sec</div>
+        </div>
+
+        <div class="value-wrapper">
+          <div class="title">Inst. download speed</div>
+          <div class="value" id="inst-dl-speed-mib-value">0</div>
+          <div class="units">MiB/sec</div>
+        </div>
+
+        <div class="value-wrapper">
+          <div class="title">Avg. download speed</div>
+          <div class="value" id="avg-dl-speed-mib-value">0</div>
+          <div class="units">MiB/sec</div>
+        </div>
+      </div>
+
+      <div class="test-row">
+        <div class="value-wrapper">
+          <div class="title">Time to first byte</div>
+          <div class="value" id="ttfb-value">0</div>
+          <div class="units">ms</div>
+        </div>
+
+        <div class="value-wrapper">
+          <div class="title">Amount downloaded</div>
+          <div class="value" id="amt-downloaded-value">0</div>
+          <div class="units">MiB</div>
+        </div>
+
+        <div class="value-wrapper">
+          <div class="title">Time taken</div>
+          <div class="value" id="time-value">0</div>
+          <div class="units">seconds</div>
+        </div>
+      </div>
+
+      <table id="info">
+        <tr>
+          <td>Your location (based on IP address):</td>
+          <td id="geo-location">N/A</td>
+        </tr>
+        <tr>
+          <td>Progress:</td>
+          <td id="progress">N/A</td>
+        </tr>
+      </table>
+
+      <div id="load-message">
+        The URL has finished loading.
+      </div>
+
+      <div id="error-message">
+        There was an error encountered while loading the URL.
+      </div>
+
+      <div id="abort-message">
+        Loading was aborted.
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="http://freegeoip.net/json/?callback=geoip"></script>
+  </body>
+</html>

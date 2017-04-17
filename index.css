@@ -1,0 +1,63 @@
+
+body {
+  font-family: sans-serif;
+}
+
+#test {
+  display: none;
+}
+
+#load-message, #error-message, #abort-message {
+  display: none;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.value-wrapper {
+  display: inline-block;
+  min-width: 250px;
+}
+
+.value-wrapper .title {
+  font-size: 15px;
+}
+
+.value-wrapper .value {
+  font-size: 55px;
+}
+
+.value-wrapper .units {
+  font-size: 15px;
+  color: #777;
+  position: relative;
+  top: -5px;
+}
+
+.test-row {
+  margin-bottom: 20px;
+}
+
+table, tr, td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+input {
+  min-width: 700px;
+}
+
+.controls {
+  margin-bottom: 30px;
+}
+
+td {
+  padding-right: 5px;
+}
+
+#info {
+  margin-top: 20px;
+  min-width: 750px;
+}
